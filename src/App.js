@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import MainPage from './MainPage';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div>Hello World</div>
+      <div>
+        <Route exact path="/" component={MainPage} />
+      </div>
     );
   }
 }
