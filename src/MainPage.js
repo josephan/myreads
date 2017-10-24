@@ -24,12 +24,13 @@ class MainPage extends React.Component {
   }
 
   render() {
+    const { currentlyReading, wantToRead, read } = this.state;
     return (
       <div>
         <h1>Main Page</h1>
-        <BookShelf name="Currently Reading" />
-        <BookShelf name="Want To Read" />
-        <BookShelf name="Read" />
+        <BookShelf name="Currently Reading" books={currentlyReading} />
+        <BookShelf name="Want To Read" books={wantToRead} />
+        <BookShelf name="Read" books={read} />
       </div>
     );
   }
